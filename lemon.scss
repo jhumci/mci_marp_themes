@@ -1,0 +1,157 @@
+/* @theme lemon */
+
+/*!
+ *
+ * @author Julian Huber
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ @import 'default';
+ */
+
+
+
+ @import 'default';
+ @import '~github-markdown-css';
+ @import '~highlight.js/styles/github-gist';
+ @import url('https://fonts.googleapis.com/css?family=Lato:600,900|Montserrat:600,800|Open+Sans:600,800&display=swap');
+
+
+
+section {
+  background: rgb(255, 255, 255);
+  font-size: 1.9em;
+  font-family: Helvetica, Lato, 'Open Sans', Montserrat, sans-serif;
+  line-height: 1.3;
+  padding: 70px;
+  word-wrap: break-word;
+  color: #000000;
+  background-image: url('images/MCI-positive-Web.png');
+  background-repeat: no-repeat;
+  background-position: right 0px top 20px;
+  background-size: 8%;
+}
+
+section.invert {
+  background-color: #043257;
+  color: #fff;
+  background-image: url('images/MCI-negative-white-Web.png');
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #bcbcbc;
+  margin: 0.0em 0 0;
+  margin-bottom: 2.0em 0 0;
+  strong {
+  font-weight: inherit;
+}
+}
+
+h1 {
+  border-bottom: none;
+  font-size: 2.0em;
+  color:#f98202
+}
+
+h1.invert {
+  color: #f98202;}
+
+h2 {
+  border-bottom: none;
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h4 {
+  font-size: 1.05em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.3em;
+  color:  #bcbcbc;
+  position:fixed;
+  font-size: 12px;
+  left: 50px;
+  bottom: 50px;
+ }
+
+header,
+footer {
+  margin: 0;
+  position: absolute;
+  left: 20px;
+  font-size: 18px;
+}
+
+
+
+ol {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px ;
+}
+
+
+
+
+pre {
+  display: block;
+  margin: 1em 0 0;
+  overflow: visible;
+
+  code {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 100%;
+    padding: 0.5em;
+    font-size: 0.7em;
+  }
+
+}
+
+
+ header {
+   top: 21px;
+   left: 50px;
+   }
+ 
+ footer {
+   font-size: 12px;
+   left: 50px;
+   bottom: 21px;
+   color:  #bcbcbc;
+   }
+
+  p,
+  blockquote {
+     margin: 1em 0 0;
+   }
+
+/* Styling page number */
+section::after {
+  position: absolute;
+  padding: 0;
+  right: 30px;
+  bottom: 21px;
+  font-weight: normal;
+  font-size: 12px;
+  color:  #000000;
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
+

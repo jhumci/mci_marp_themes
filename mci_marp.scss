@@ -1,0 +1,419 @@
+
+/* @theme mci_marp */
+
+/*!
+ *
+ * @author Julian Huber
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+ @import 'default';
+ @import url('https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap');
+ 
+ 
+
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   margin: 0.5em 0 0;
+   margin-bottom: 2.0em 0 0;
+   strong {
+     font-weight: inherit;
+   }
+
+
+
+ }
+ 
+ h1 {
+   font-size: 3.0em;
+   color:#f98202
+ }
+ 
+ h2 {
+   font-size: 2.0em;
+   color: #014882
+ }
+ 
+ h3 {
+   font-size: 1.4em;
+   color:  #bcbcbc;
+ }
+ 
+ h4 {
+  font-size: 1.4em;
+  color:  #bcbcbc;
+ }
+ 
+ h5 {
+  font-size: 1.4em;
+  color:  #bcbcbc;
+ }
+ 
+ h6 {
+  font-size: 0.3em;
+  color:  #bcbcbc;
+  position:fixed;
+  font-size: 12px;
+  left: 78px;
+  bottom: 50px;
+ }
+ 
+p {
+
+  color:  #bcbcbc;
+
+}
+
+ul,
+ol {
+ color:  #bcbcbc;
+ list-style-type: square;
+ margin-top: 1.2em;
+ margin-bottom: 0.2em;
+
+ 
+ }
+
+
+li {
+
+  color:  #bcbcbc;
+
+
+}
+
+
+ blockquote {
+   margin: 1em 0 0;
+ }
+
+
+
+ code {
+   display: inline-block;
+   font-family: 'Roboto Mono', monospace;
+   font-size: 0.8em;
+   letter-spacing: 0;
+   margin: -0.1em 0.15em;
+   padding: 0.1em 0.2em;
+   vertical-align: baseline;
+ }
+ 
+ pre {
+   display: block;
+   margin: 1em 0 0;
+   overflow: visible;
+ 
+   code {
+     box-sizing: border-box;
+     margin: 0;
+     min-width: 100%;
+     padding: 0.5em;
+     font-size: 0.7em;
+   }
+ 
+ 
+ }
+ 
+ blockquote {
+   margin: 1em 0 0;
+   padding: 0 1em;
+   position: relative;
+ 
+   &::after,
+   &::before {
+     content: '“';
+     display: block;
+     font-family: 'Times New Roman', serif;
+     font-weight: bold;
+     position: absolute;
+   }
+ 
+   &::before {
+     top: 0;
+     left: 0;
+   }
+ 
+   &::after {
+     right: 0;
+     bottom: 0;
+     transform: rotate(180deg);
+   }
+ 
+   > *:first-child {
+     margin-top: 0;
+   }
+ }
+ 
+ mark {
+   background: transparent;
+   font-weight: bold;
+   color: #f98202;
+ }
+
+ em{
+  background: transparent;
+  font-weight: bold;
+  color: #000000;
+}
+
+strong{
+  background: transparent;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+}
+
+
+ table {
+   border-spacing: 0;
+   border-collapse: collapse;
+   margin: 1em 0 0;
+ 
+   th,
+   td {
+     padding: 0.2em 0.4em;
+     border-width: 1px;
+     border-style: solid;
+   }
+ }
+ 
+ header,
+ footer,
+ section::after {
+   box-sizing: border-box;
+   font-size: 66%;
+   height: 70px;
+   line-height: 50px;
+   overflow: hidden;
+   padding: 10px 25px;
+   position: absolute;
+ }
+ 
+ 
+ 
+ header {
+   top: 0px;
+   left: 1080px;
+   }
+ 
+ footer {
+   font-size: 12px;
+   left: 50px;
+   bottom: 0px;
+   }
+ 
+ 
+ section {
+   background: rgb(255, 255, 255);
+   font-size: 2.0em;
+   font-family: Univers, Lato, 'Avenir Next', Avenir, 'Trebuchet MS', 'Segoe UI',
+     sans-serif;
+   height: 720px;
+   line-height: 1.3;
+   padding: 70px;
+   width: 1280px;
+   word-wrap: break-word;
+ 
+ @include color-scheme($color-light, $color-dark, $color-primary);
+ 
+   &::after {
+     right: 0;
+     bottom: 0;
+     font-size: 80%;
+   }
+ 
+   a,
+   mark {
+     color: var(--color-highlight);
+   }
+ 
+   code {
+     background: var(--color-dimmed);
+     color: var(--color-background);
+   }
+ 
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+     strong {
+       color: var(--color-highlight);
+     }
+   }
+ 
+   pre {
+     background: var(--color-foreground);
+   }
+ 
+   pre > code {
+     background: transparent;
+   }
+ 
+   header,
+   footer,
+   section::after,
+   blockquote::before,
+   blockquote::after {
+     color: var(--color-dimmed);
+   }
+ 
+   table {
+     th,
+     td {
+       border-color: var(--color-foreground);
+     }
+ 
+     thead th {
+       background: var(--color-foreground);
+       color: var(--color-background);
+     }
+ 
+     tbody > tr:nth-child(odd) {
+       td,
+       th {
+         background: var(--color-background-stripe, transparent);
+       }
+     }
+   }
+ 
+   > *:first-child,
+   > header:first-child + * {
+     margin-top: 0;
+   }
+ 
+   &:where(.invert) {
+     @include color-scheme($color-dark, $color-light, $color-secondary);
+   }
+ 
+   &:where(.mci_marp) {
+     @include color-scheme($color-primary, $color-light, $color-secondary);
+   }
+   &:where(.lead) {
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+ 
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
+       text-align: center;
+     }
+ 
+     p {
+       text-align: center;
+     }
+ 
+     blockquote {
+       > h1,
+       > h2,
+       > h3,
+       > h4,
+       > h5,
+       > h6,
+       > p {
+         text-align: left;
+       }
+     }
+ 
+     table {
+       margin-left: auto;
+       margin-right: auto;
+     }
+   }
+ 
+ }
+ 
+ /* 
+     slides containg bibliography
+     Use: 
+     
+     <!-- _class: biblio --> 
+     # References
+     1. Item one
+     2. Item two
+ */
+ 
+ section.biblio {
+   background-color: var(--background-color);
+ }
+ section.biblio p {
+   color: var(--text-color);
+   font-size: 90%;
+   font-weight: 300;
+   padding-left: 5px;
+ }
+ section.biblio h1 {
+   font-size: 35px;
+   color: var(--text-color);
+   border-bottom: 1px solid var(--border-color);
+ }
+ section.biblio strong {
+   color: var(--bold-color);
+ }
+ section.biblio a {
+   font-size: 31px;
+   font-weight: bold;
+   color: var(--bold-color);
+ }
+ section.biblio li {
+   color: var(--text-color);
+ }
+ section.biblio footer,
+ section.biblio header,
+ section.biblio:after {
+   /* hide header, footer and pagination */
+   display: none;
+ }
+ 
+ 
+  /* 
+   Adds class 
+ */
+
+ .boxtext {
+  display: grid;
+  grid-template-columns: repeat(2, 480px);
+  gap: 1;
+  text-align: justify;
+  /* justify-content: center !important; */
+}
+
+
+ 
+ /* 
+   Adds two-columns class 
+ */
+
+ .columns {
+   display: grid;
+   grid-template-columns: repeat(2, 50%);
+   gap: 1;
+   /* justify-content: center !important; */
+ }
+ 
+ /* 
+   Adds two-columns with centered contens class 
+ */
+ .columns-center {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 1rem;
+   justify-items: center;
+   justify-content: center;
+   align-items: center;
+ }
+ 
