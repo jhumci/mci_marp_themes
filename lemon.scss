@@ -153,8 +153,3 @@ section::after {
   color:  #000000;
   content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
 }
-
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
