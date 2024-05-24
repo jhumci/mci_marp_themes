@@ -7,7 +7,7 @@
 
 :root {
   font-family: "CMU Sans Serif", "Segoe UI", Helvetica, sans-serif;
-  --main: #1f38c5;
+  --main: #004983;
   --secondary: #141414;
 }
 
@@ -76,7 +76,7 @@ code {
 }
 
 mark {
-  background-color: #f5db7e;
+  background-color: #ff9900;
 }
 
 /* formatting page numbers  */
@@ -100,10 +100,10 @@ section::after {
 
 /* the "center" keyword centers the image - may break, careful */
 /* https://github.com/marp-team/marpit/issues/141#issuecomment-473204518 */
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
+/*img[alt~="center"] {*/
+/*  display: block;*/
+/*  margin: 0 auto;*/
+/*}
 
 /* || SECTION CLASS: title */
 /* title page - only to be used as for a single slide */
