@@ -168,6 +168,11 @@ section.tinytext>blockquote {
   font-size: 0.65em;
 }
 
+/* || SECTION CLASS: tinytable */
+section.tinytable>table {
+  font-size: 0.65em;
+}
+
 h1, h2, h3 {
   color: #ffffff;
   font-weight: normal;
